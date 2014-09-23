@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec target/universal/stage/bin/template-project
