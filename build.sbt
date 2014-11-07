@@ -19,6 +19,8 @@ javacOptions ++= Seq("-Xlint:unchecked")
 
 packageArchetype.java_application
 
+resolvers += "Typesafe releases" at "http://repo.typesafe.com/typesafe/releases"
+
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "2.2.2" % "test",
   "org.scalamock" %% "scalamock-scalatest-support" % "3.1.2" % "test"
