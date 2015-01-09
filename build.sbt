@@ -12,7 +12,18 @@ lazy val root = Project(
       "-feature",
       "-unchecked",
       "-deprecation",
-      "-encoding", "utf8"
+      "-encoding", "utf8",
+      //"-language:existentials",
+      //"-language:higherKinds",
+      //"-language:implicitConversions",
+      "-Xfatal-warnings",
+      "-Xlint",
+      "-Yno-adapted-args",
+      "-Ywarn-dead-code",        // N.B. doesn't work well with the ??? hole
+      "-Ywarn-numeric-widen",
+      "-Ywarn-value-discard",
+      "-Xfuture",
+      "-Ywarn-unused-import"
     ),
     javacOptions ++= Seq("-Xlint:unchecked"),
     resolvers += "Typesafe releases" at "http://repo.typesafe.com/typesafe/releases",
