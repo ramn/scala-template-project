@@ -1,12 +1,11 @@
-import com.typesafe.sbt.SbtNativePackager._
-import NativePackagerKeys._
-
+enablePlugins(JavaAppPackaging)
 
 lazy val root = Project(
   id="root",
   base=file("."),
   settings=Seq(
     name := "template-project",
+    executableScriptName := "run",
     version := "0.1-SNAPSHOT",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq(
@@ -23,5 +22,3 @@ lazy val root = Project(
     )
   )
 )
-
-packageArchetype.java_application
