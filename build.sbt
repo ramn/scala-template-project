@@ -25,7 +25,7 @@ lazy val root = Project(
       "-Xfuture",
       "-Ywarn-unused-import"
     ),
-    testOptions in Test += Tests.Argument("-oD"),
+    testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD"),
     javacOptions ++= Seq("-Xlint:unchecked"),
     resolvers += "Typesafe releases" at "http://repo.typesafe.com/typesafe/releases",
     libraryDependencies ++= Seq(
