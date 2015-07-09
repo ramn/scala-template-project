@@ -1,9 +1,7 @@
 enablePlugins(JavaAppPackaging)
 
-lazy val root = Project(
-  id="root",
-  base=file("."),
-  settings=Seq(
+lazy val root = (project in file("."))
+  .settings(
     name := "template-project",
     executableScriptName := "run",
     version := "0.1-SNAPSHOT",
@@ -33,4 +31,3 @@ lazy val root = Project(
       "org.scalamock" %% "scalamock-scalatest-support" % "3.2.1" % "test"
     )
   )
-)
