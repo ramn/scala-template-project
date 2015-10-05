@@ -5,7 +5,7 @@ lazy val root = (project in file("."))
     name := "template-project",
     executableScriptName := "run",
     version := "0.1-SNAPSHOT",
-    scalaVersion := "2.11.6",
+    scalaVersion := "2.11.7",
     scalacOptions ++= Seq(
       "-feature",
       "-unchecked",
