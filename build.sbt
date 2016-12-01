@@ -26,5 +26,11 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "2.2.2" % "test",
       "org.scalamock" %% "scalamock-scalatest-support" % "3.2.1" % "test"
-    )
-  )
+    ),
+    fork in Test := true,
+    parallelExecution in Test := true,
+    testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD"),
+    fork in IntegrationTest := true,
+    parallelExecution in IntegrationTest := false,
+    testOptions in IntegrationTest += Tests.Argument(TestFrameworks.ScalaTest, "-oD")
+)
